@@ -1,0 +1,6 @@
+@use './config';
+
+body {
+  height: 100vh;
+  background-color: config.$backgroundTest;
+}
