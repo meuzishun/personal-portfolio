@@ -1,6 +1,9 @@
-$headerBackground: rgb(255, 204, 0);
-$mainBackground: rgb(0, 234, 255);
-$footerBackground: rgb(93, 0, 255);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+$fontStack: 'Roboto', sans-serif;
+
+$headerBackground: rgb(255, 239, 174);
+$mainBackground: rgb(169, 248, 255);
+$footerBackground: rgb(190, 153, 253);
 
 $tabletBreakpoint: 600px;
 $desktopBreakpoint: 900px;
