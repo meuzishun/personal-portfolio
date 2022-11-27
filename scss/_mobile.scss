@@ -1,0 +1,13 @@
+@use './config';
+
+.main-header {
+  margin: config.$mobileMargin;
+}
+
+.main-content {
+  margin: 0 config.$mobileMargin;
+}
+
+.main-footer {
+  margin: config.$mobileMargin;
+}

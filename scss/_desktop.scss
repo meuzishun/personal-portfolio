@@ -1,0 +1,15 @@
+@use './config';
+
+@media (min-width: config.$desktopBreakpoint) {
+  .main-header {
+    margin: config.$desktopMargin;
+  }
+
+  .main-content {
+    margin: 0 config.$desktopMargin;
+  }
+
+  .main-footer {
+    margin: config.$desktopMargin;
+  }
+}

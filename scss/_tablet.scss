@@ -1,0 +1,15 @@
+@use './config';
+
+@media (min-width: config.$tabletBreakpoint) {
+  .main-header {
+    margin: config.$tabletMargin;
+  }
+
+  .main-content {
+    margin: 0 config.$tabletMargin;
+  }
+
+  .main-footer {
+    margin: config.$tabletMargin;
+  }
+}

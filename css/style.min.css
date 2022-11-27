@@ -1,1 +1,1 @@
-body{height:100vh;background-color:#ff6a00}
+.main-header{margin:0}.main-content{margin:0 0}.main-footer{margin:0}@media(min-width: 600px){.main-header{margin:1.75vw}.main-content{margin:0 1.75vw}.main-footer{margin:1.75vw}}@media(min-width: 900px){.main-header{margin:1rem}.main-content{margin:0 1rem}.main-footer{margin:1rem}}*{margin:0;padding:0;font-size:16px}.wrapper{min-height:100vh;max-width:1200px;margin:0 auto;display:flex;flex-direction:column}.main-header{background-color:#fc0}.main-content{background-color:#00eaff;flex:1}.main-footer{background-color:#5d00ff}

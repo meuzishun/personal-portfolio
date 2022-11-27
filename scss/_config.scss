@@ -1,1 +1,18 @@
-$backgroundTest: rgb(255, 106, 0);
+$headerBackground: rgb(255, 204, 0);
+$mainBackground: rgb(0, 234, 255);
+$footerBackground: rgb(93, 0, 255);
+
+$tabletBreakpoint: 600px;
+$desktopBreakpoint: 900px;
+
+$mobileMargin: 0;
+$tabletMargin: 1.75vw;
+$desktopMargin: 1rem;
+
+// @media (max-width: 600px) {
+//   $wrapperMargin: 0;
+// }
+
+// @media (max-width: 900px) {
+//   $wrapperMargin: 0.5vw;
+// }

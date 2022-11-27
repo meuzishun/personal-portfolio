@@ -1,6 +1,31 @@
 @use './config';
+@use './mobile';
+@use './tablet';
+@use './desktop';
 
-body {
-  height: 100vh;
-  background-color: config.$backgroundTest;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  background-color: config.$headerBackground;
+}
+
+.main-content {
+  background-color: config.$mainBackground;
+  flex: 1;
+}
+
+.main-footer {
+  background-color: config.$footerBackground;
 }
