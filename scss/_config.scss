@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
-$fontStack: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@300;500&display=swap');
 
-$headerBackground: rgb(255, 239, 174);
-$mainBackground: rgb(169, 248, 255);
-$footerBackground: rgb(190, 153, 253);
+$fontStack1: 'Roboto', sans-serif;
+$fontStack2: 'Lato', sans-serif;
+
+$headerBackground: rgb(255, 255, 255);
+$mainBackground: rgb(255, 255, 255);
+$footerBackground: rgb(255, 255, 255);
 
 $tabletBreakpoint: 600px;
 $desktopBreakpoint: 900px;
@@ -11,11 +14,3 @@ $desktopBreakpoint: 900px;
 $mobileMargin: 0;
 $tabletMargin: 1.75vw;
 $desktopMargin: 1rem;
-
-// @media (max-width: 600px) {
-//   $wrapperMargin: 0;
-// }
-
-// @media (max-width: 900px) {
-//   $wrapperMargin: 0.5vw;
-// }

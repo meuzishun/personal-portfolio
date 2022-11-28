@@ -11,7 +11,20 @@
 
 body {
   font-size: 16px;
-  font-family: config.$fontStack;
+  font-family: config.$fontStack2;
+  background-color: #fff;
+}
+
+svg {
+  height: 2rem;
+}
+
+img {
+  height: 10rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -20,10 +33,19 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  & > * {
+    outline: 1px solid grey;
+  }
 }
 
 .main-header {
   background-color: config.$headerBackground;
+
+  .links {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .main-content {
@@ -33,4 +55,8 @@ body {
 
 .main-footer {
   background-color: config.$footerBackground;
+
+  .email-container a {
+    display: flex;
+  }
 }
