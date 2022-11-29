@@ -19,10 +19,6 @@ svg {
   height: 2rem;
 }
 
-img {
-  height: 10rem;
-}
-
 a {
   text-decoration: none;
 }
@@ -35,15 +31,46 @@ a {
   flex-direction: column;
 
   & > * {
-    outline: 1px solid grey;
+    // outline: 1px solid grey;
   }
 }
 
 .main-header {
   background-color: config.$headerBackground;
+  display: grid;
+
+  .top {
+    grid-area: top;
+    min-height: 15rem;
+    min-width: 15rem;
+    background-image: url('../images/headshot.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 84% 5%;
+
+    h1 {
+      font-family: config.$fontStack1;
+      font-weight: 300;
+      color: #fff;
+      font-size: clamp(3rem, 5vw, 4rem);
+      padding: 0.25rem 2rem;
+    }
+  }
+
+  .about {
+    padding: 0.5rem;
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+  }
 
   .links {
+    padding: 0.5rem;
+    grid-area: links;
     display: flex;
+    justify-content: right;
+    align-items: flex-end;
     gap: 10px;
   }
 }

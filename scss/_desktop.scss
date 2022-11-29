@@ -3,6 +3,11 @@
 @media (min-width: config.$desktopBreakpoint) {
   .main-header {
     margin: config.$desktopMargin;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      'top about'
+      'top links';
   }
 
   .main-content {
