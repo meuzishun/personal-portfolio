@@ -4,6 +4,10 @@
 $fontStack1: 'Roboto', sans-serif;
 $fontStack2: 'Lato', sans-serif;
 
+$lightFontColor: #fff;
+$darkFontColor: rgb(0, 0, 0);
+$lightBackgroundColor: #fff;
+$darkBackgroundColor: rgb(0, 0, 0);
 $headerBackground: rgb(255, 255, 255);
 $mainBackground: rgb(255, 255, 255);
 $footerBackground: rgb(255, 255, 255);
@@ -12,5 +16,5 @@ $tabletBreakpoint: 600px;
 $desktopBreakpoint: 900px;
 
 $mobileMargin: 0;
-$tabletMargin: 1.75vw;
+$tabletMargin: 1vw;
 $desktopMargin: 1rem;

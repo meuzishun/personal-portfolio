@@ -3,6 +3,25 @@
 @use './tablet';
 @use './desktop';
 
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return config.$darkFontColor;
+  } @else {
+    @return config.$lightFontColor;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+  svg path {
+    fill: set-text-color($color);
+  }
+  svg path + path {
+    fill: $color;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,15 +31,33 @@
 body {
   font-size: 16px;
   font-family: config.$fontStack2;
+  color: inherit;
   background-color: #fff;
 }
 
 svg {
-  height: 2rem;
+  height: clamp(2rem, 4vw, 5rem);
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: config.$fontStack1;
+  font-weight: 300;
+  color: config.$lightFontColor;
+  font-size: clamp(3rem, 5vw, 4rem);
+  padding: 0.25rem 2rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .wrapper {
@@ -35,43 +72,39 @@ a {
   }
 }
 
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
 .main-header {
-  background-color: config.$headerBackground;
+  @include set-background(config.$lightBackgroundColor);
   display: grid;
+  grid-gap: 1rem;
 
   .top {
     grid-area: top;
     min-height: 15rem;
     min-width: 15rem;
-    background-image: url('../images/headshot.jpg');
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.128),
+        rgba(255, 255, 255, 0.432)
+      ),
+      url('../images/headshot.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 84% 5%;
-
-    h1 {
-      font-family: config.$fontStack1;
-      font-weight: 300;
-      color: #fff;
-      font-size: clamp(3rem, 5vw, 4rem);
-      padding: 0.25rem 2rem;
-    }
+    background-position: 5% 5%;
   }
 
   .about {
     padding: 0.5rem;
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
   }
 
   .links {
     padding: 0.5rem;
     grid-area: links;
-    display: flex;
     justify-content: right;
     align-items: flex-end;
-    gap: 10px;
   }
 }
 
@@ -81,9 +114,40 @@ a {
 }
 
 .main-footer {
-  background-color: config.$footerBackground;
+  // @include set-background(config.$darkBackgroundColor);
+  background-image: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.79),
+      rgb(255, 255, 255, 1)
+    ),
+    url('../images/card.jpg');
+  background-size: cover;
+  background-position: 25% 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
 
-  .email-container a {
-    display: flex;
+  .call-to-action {
+    // margin-bottom: 3rem;
+  }
+
+  .email-container {
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid config.$darkBackgroundColor;
+    border-radius: 5000px;
+
+    a {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      color: inherit;
+    }
+  }
+
+  .links {
+    justify-content: space-evenly;
   }
 }

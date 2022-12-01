@@ -10,7 +10,7 @@
     'links';
 
   .top {
-    background-position: 90% 5%;
+    background-position: 10% 5%;
   }
 }
 
@@ -20,4 +20,8 @@
 
 .main-footer {
   margin: config.$mobileMargin;
+
+  .email-container {
+    align-self: center;
+  }
 }

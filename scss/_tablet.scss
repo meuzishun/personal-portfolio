@@ -21,5 +21,9 @@
 
   .main-footer {
     margin: config.$tabletMargin;
+
+    .email-container {
+      align-self: center;
+    }
   }
 }

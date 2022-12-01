@@ -16,5 +16,9 @@
 
   .main-footer {
     margin: config.$desktopMargin;
+
+    .email-container {
+      align-self: flex-start;
+    }
   }
 }
