@@ -10,7 +10,8 @@
   grid-template-areas:
     'top'
     'about'
-    'links';
+    'links'
+    'skills';
   margin: 0;
 
   .top {
@@ -39,6 +40,12 @@
     justify-content: right;
     align-items: flex-end;
   }
+
+  .tech-icons {
+    grid-area: skills;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width: $mediumBreakpoint) {
@@ -49,7 +56,8 @@
     grid-template-areas:
       'top'
       'about'
-      'links';
+      'links'
+      'skills';
 
     .top {
       background-position: 90% 5%;
@@ -64,6 +72,7 @@
     grid-template-columns: auto auto;
     grid-template-areas:
       'top about'
-      'top links';
+      'top links'
+      'skills skills';
   }
 }
